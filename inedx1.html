@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Photography Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Segoe+UI:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #f4f4f8;
+      color: #333;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 30px;
+      color: #000;
+      font-weight: bold;
+      font-size: 2.4rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    }
+
+    .intro-box {
+      background: white;
+      margin: 20px auto 30px;
+      padding: 25px 20px;
+      max-width: 600px;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .intro-box h2 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #000;
+    }
+
+    .intro-box p {
+      font-size: 1.1rem;
+      color: #555;
+      animation: fadeUp 1s ease forwards;
+      animation-delay: 0.4s;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      padding: 0 20px 40px;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: fadeUp 0.7s ease both;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.55);
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-content {
+      padding: 15px;
+    }
+
+    .description {
+      margin-bottom: 10px;
+      font-size: 15px;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .buttons button {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.2s;
+    }
+
+    .like { background: #ffcccc; }
+    .like:hover { background: #ff9999; }
+
+    .comment { background: #e0e0ff; }
+    .comment:hover { background: #9999ff; }
+
+    .download { background: #ccffcc; }
+    .download:hover { background: #66ff66; }
+
+    .user-comment {
+      margin-top: 10px;
+      font-size: 14px;
+      font-style: italic;
+      color: #444;
+    }
+
+    .footer {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      padding: 20px 10px;
+      border-top: 1px solid #ddd;
+      background: #fff;
+    }
+
+    .footer a {
+      color: #333;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 500;
+      gap: 6px;
+      margin: 0 10px;
+    }
+
+    .footer svg {
+      width: 18px;
+      height: 18px;
+      fill: #333;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Scenery Photography Portfolio</h1>
+
+  <div class="intro-box">
+    <h2>SUDHARSAN</h2>
+    <p>Welcome to my photography showcase. Captured by Realme GT Neo 3, this collection features tranquil sunsets and cloud-filled evenings. Enjoy these 10 moments through my lens 📸</p>
+  </div>
+
+  <div class="gallery" id="gallery"></div>
+
+  <div class="footer">
+    <p>© 2025 SUDHARSAN. All rights reserved.</p>
+    <p>
+      <a href="https://github.com" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+          0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01
+          1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95
+          0-.87.31-1.59.82-2.15-.08-.2-.36-1.01.08-2.11
+          0 0 .67-.21 2.2.82a7.56 7.56 0 012.01-.27c.68 0 1.36.09
+          2.01.27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.91.08
+          2.11.51.56.82 1.27.82 2.15 0 3.07-1.87
+          3.75-3.65 3.95.29.25.54.73.54
+          1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01
+          8.01 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        GitHub
+      </a>
+
+      <a href="https://openai.com/chatgpt" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24">
+          <path d="M16.79 1.7a6.28 6.28 0 00-6.79 0A6.28 6.28 0 005.21 6v1.23A6.26 6.26 0 002.5 12a6.27 6.27 0 003.09 5.27v1.23a6.28 6.28 0 006.79 0 6.28 6.28 0 006.79 0 6.28 6.28 0 003.09-5.27 6.26 6.26 0 00-3.09-5.27V6a6.28 6.28 0 00-3.09-4.3zM12 14.5a2.5 2.5 0 110-5 2.5 2.5 0 010 5z" />
+        </svg>
+        ChatGPT
+      </a>
+    </p>
+  </div>
+
+  <script>
+    const descriptions = [
+      "Captured by Realme GT Neo 3 — GOLDEN CLOUD",
+      "Captured by Realme GT Neo 3 — GOLDEN CLOUD",
+      "Captured by Realme GT Neo 3 — GOLDEN EVENING",
+      "Captured by Realme GT Neo 3 — BIG BANYAN",
+      "Captured by Realme GT Neo 3 — GOLDEN SUNSET WITH TREE",
+      "Captured by Realme GT Neo 3 — ORANGE SUNSET",
+      "Captured by Realme GT Neo 3 — EVENING ROAD VIEW",
+      "Captured by Realme GT Neo 3 — BLUE CLOUDS",
+      "Captured by Realme GT Neo 3 — CLEAN BLUE SKY",
+      "Captured by Realme GT Neo 3 — HIGH CONTRAST BLUE SKY"
+    ];
+
+    const gallery = document.getElementById("gallery");
+
+    for (let i = 1; i <= 10; i++) {
+      const card = document.createElement("div");
+      card.className = "card";
+      card.style.animationDelay = `${i * 0.1}s`;
+      card.innerHTML = `
+        <img src="photo${i}.jpg" alt="Photo ${i}" loading="lazy">
+        <div class="card-content">
+          <div class="description">${descriptions[i - 1]}</div>
+          <div class="buttons">
+            <button class="like" onclick="likePhoto(this)" aria-label="Like this photo">Like ❤️</button>
+            <button class="comment" onclick="addComment(this)" aria-label="Comment on this photo">Comment 💬</button>
+            <a href="photo${i}.jpg" download>
+              <button class="download" aria-label="Download this photo">Download ⬇️</button>
+            </a>
+          </div>
+          <div class="user-comment"></div>
+        </div>
+      `;
+      gallery.appendChild(card);
+    }
+
+    function likePhoto(btn) {
+      btn.innerText = btn.innerText.includes("Liked") ? "Like ❤️" : "Liked ✅";
+    }
+
+    function addComment(btn) {
+      const commentBox = btn.closest(".card-content").querySelector(".user-comment");
+      const comment = prompt("Enter your comment:");
+      if (comment) {
+        commentBox.innerText = `"${comment}"`;
+      }
+    }
+  </script>
+
+</body>
+</html>
